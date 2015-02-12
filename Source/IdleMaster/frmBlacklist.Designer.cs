@@ -58,7 +58,7 @@
             this.groupBox1.Size = new System.Drawing.Size(181, 76);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add Game to Blacklist";
+            this.groupBox1.Text = "Ajouter le jeu à la liste noire";
             // 
             // btnAdd
             // 
@@ -123,7 +123,7 @@
             this.MinimizeBox = false;
             this.Name = "frmBlacklist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Manage Idle Master Blacklist";
+            this.Text = "Gérer la liste noire d'Idle Master";
             this.Load += new System.EventHandler(this.frmBlacklist_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

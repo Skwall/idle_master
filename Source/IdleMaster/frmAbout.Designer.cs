@@ -74,7 +74,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "by jshackles";
+            this.label2.Text = "Crée par jshackles || Traduit en Français par Skwall";
             // 
             // frmAbout
             // 
@@ -91,7 +91,7 @@
             this.MaximizeBox = false;
             this.Name = "frmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "About Idle Master";
+            this.Text = "A propos de Idle Master";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

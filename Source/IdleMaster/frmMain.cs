@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -117,8 +117,8 @@ namespace IdleMaster
             picApp.Visible = true;
 
             // Update label controls
-            lblCurrentRemaining.Text = badgesLeft[appid] + " card drops remaining";
-            lblCurrentStatus.Text = "Currently in-game";
+            lblCurrentRemaining.Text = "Il reste "+badgesLeft[appid]+ " cartes à récuperer";
+            lblCurrentStatus.Text = "Actuellement dans un jeu";
 
             // Set progress bar values and show the footer
             pbIdle.Maximum = Int32.Parse(badgesLeft[appid]);
@@ -163,7 +163,7 @@ namespace IdleMaster
                 lblGameName.Visible = false;
                 picApp.Image = null;
                 picApp.Visible = false;
-                lblCurrentStatus.Text = "Not in game";
+                lblCurrentStatus.Text = "Pas de session de jeu";
                 picIdleStatus.Image = null;
 
                 // Stop the card drop check timer
@@ -190,7 +190,7 @@ namespace IdleMaster
         {
             // Deactivate the timer control and inform the user that the program is finished
             tmrCardDropCheck.Enabled = false;
-            lblCurrentStatus.Text = "Idling complete";
+            lblCurrentStatus.Text = "Farming terminé";
         }
 
         public async Task<string> GetHttpAsync(String url)
@@ -339,9 +339,9 @@ namespace IdleMaster
             SortBadges(Properties.Settings.Default.sort);
 
             picReadingPage.Visible = false;
-            lblIdle.Text = badgesLeft.Count + " games left to idle";
+            lblIdle.Text ="Encore "+ badgesLeft.Count + " jeux à farmer";
             lblIdle.Visible = true;
-            lblDrops.Text = totaldrops.ToString() + " card drops remaining";
+            lblDrops.Text = "Il reste encore" +totaldrops.ToString() + " cartes à récuperer en tout";
             lblDrops.Visible = true;
             
             // Set global variable values
@@ -367,7 +367,7 @@ namespace IdleMaster
                 int intDrops;
                 if (Int32.TryParse(Regex.Match(numDrops, @"(\d+)").Groups[1].Value, out intDrops)) {
                     // card drops remaining
-                    Console.WriteLine(GetAppName(appid) + " has " + intDrops + " card drops remaining.");
+                    Console.WriteLine(GetAppName(appid) + " a encore " + intDrops + " cartes à récuperer");
 
                     // Determine if the drop count has changed
                     int dropsSoFar = Int32.Parse(badgesLeft[appid]) - intDrops;
@@ -376,7 +376,7 @@ namespace IdleMaster
                     if (dropsBefore != dropsSoFar)
                     {
                         totalCardsRemaining = totalCardsRemaining - (dropsSoFar - dropsBefore);
-                        lblDrops.Text = totalCardsRemaining + " card drops remaining";
+                        lblDrops.Text = totalCardsRemaining + " à récuperer en tout";
                         pbIdle.Value = dropsSoFar;
                     }
 
@@ -394,15 +394,15 @@ namespace IdleMaster
                 else
                 {
                     // no card drops remaining
-                    Console.WriteLine(GetAppName(appid) + " has no card drops remaining.");
+                    Console.WriteLine(GetAppName(appid) + " n'a plus de cartes restantes");
 
                     badgesLeft.Remove(appid);
 
                     // Update totals
                     totalCardsRemaining = totalCardsRemaining - 1;
                     totalGamesRemaining = totalGamesRemaining - 1;
-                    lblIdle.Text = totalGamesRemaining + " games left to idle";
-                    lblDrops.Text = totalCardsRemaining + " card drops remaining";
+                    lblIdle.Text = totalGamesRemaining + " jeux restent à farmer";
+                    lblDrops.Text = totalCardsRemaining + " cartes restent à récuperer";
 
                     // Stop idling the current game
                     stopIdle();
@@ -485,7 +485,7 @@ namespace IdleMaster
         {
             if (Properties.Settings.Default.sessionid != "" && Properties.Settings.Default.steamLogin != "")
             {
-                lblCookieStatus.Text = "Idle Master is connected to Steam";
+                lblCookieStatus.Text = "Idle Master est connecté à Steam";
                 lblCookieStatus.ForeColor = System.Drawing.Color.Green;
                 picCookieStatus.Image = Properties.Resources.imgTrue;
                 lnkSignIn.Visible = false;
@@ -494,7 +494,7 @@ namespace IdleMaster
             }
             else
             {
-                lblCookieStatus.Text = "Idle Master is not connected to Steam";
+                lblCookieStatus.Text = "Idle Master est déconnecté de Steam";
                 lblCookieStatus.ForeColor = System.Drawing.Color.Black;
                 picCookieStatus.Image = Properties.Resources.imgFalse;
                 lnkSignIn.Visible = true;
@@ -506,7 +506,7 @@ namespace IdleMaster
         private void tmrCheckSteam_Tick(object sender, EventArgs e)
         {
             if (SteamAPI.IsSteamRunning() == true) {
-                lblSteamStatus.Text = "Steam is running";
+                lblSteamStatus.Text = "Steam est opérationnel";
                 lblSteamStatus.ForeColor = System.Drawing.Color.Green;
                 picSteamStatus.Image = Properties.Resources.imgTrue;
                 tmrCheckSteam.Interval = 5000;                
@@ -516,7 +516,7 @@ namespace IdleMaster
             }
             else
             {
-                lblSteamStatus.Text = "Steam is not running";
+                lblSteamStatus.Text = "Steam est fermé";
                 lblSteamStatus.ForeColor = System.Drawing.Color.Black;
                 picSteamStatus.Image = Properties.Resources.imgFalse;
                 tmrCheckSteam.Interval = 500;
@@ -583,7 +583,7 @@ namespace IdleMaster
             {
                 // Update the form elements
                 lblDrops.Visible = true;
-                lblDrops.Text = "Reading badge page, please wait...";
+                lblDrops.Text = "Lecture de la liste des badges, veuillez patienter...";
                 lblIdle.Visible = false;
                 picReadingPage.Visible = true;
 
@@ -655,7 +655,7 @@ namespace IdleMaster
             stopIdle();
 
             // Indicate to the user that idling has been paused
-            lblCurrentStatus.Text = "Idling paused";
+            lblCurrentStatus.Text = "Farming en pause";
 
             // Set the correct button visibility
             btnResume.Visible = true;

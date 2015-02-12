@@ -58,7 +58,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Idle Master is saving your information";
+            this.label1.Text = "Idle Master sauvegarde vos informations";
             // 
             // pictureBox1
             // 
@@ -85,7 +85,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmBrowser";
-            this.Text = "Please Login to Steam";
+            this.Text = "Veuillez vous connecter à Steam";
             this.Load += new System.EventHandler(this.frmBrowser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

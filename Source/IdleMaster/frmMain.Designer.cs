@@ -84,7 +84,7 @@
             this.lblCookieStatus.Name = "lblCookieStatus";
             this.lblCookieStatus.Size = new System.Drawing.Size(186, 13);
             this.lblCookieStatus.TabIndex = 0;
-            this.lblCookieStatus.Text = "Idle Master is not connected to Steam";
+            this.lblCookieStatus.Text = "Idle Master est deconnecté de Steam";
             // 
             // tmrCheckCookieData
             // 
@@ -98,7 +98,7 @@
             this.lblSteamStatus.Name = "lblSteamStatus";
             this.lblSteamStatus.Size = new System.Drawing.Size(103, 13);
             this.lblSteamStatus.TabIndex = 3;
-            this.lblSteamStatus.Text = "Steam is not running";
+            this.lblSteamStatus.Text = "Steam n'est pas lancé";
             // 
             // tmrCheckSteam
             // 
@@ -137,7 +137,7 @@
             this.lblDrops.Name = "lblDrops";
             this.lblDrops.Size = new System.Drawing.Size(105, 13);
             this.lblDrops.TabIndex = 9;
-            this.lblDrops.Text = "card drops remaining";
+            this.lblDrops.Text = "cartes restantes à récuperer";
             this.lblDrops.Visible = false;
             // 
             // lblIdle
@@ -147,7 +147,7 @@
             this.lblIdle.Name = "lblIdle";
             this.lblIdle.Size = new System.Drawing.Size(86, 13);
             this.lblIdle.TabIndex = 10;
-            this.lblIdle.Text = "games left to idle";
+            this.lblIdle.Text = "jeux restants à farmer";
             this.lblIdle.Visible = false;
             // 
             // lblCurrentStatus
@@ -157,7 +157,7 @@
             this.lblCurrentStatus.Name = "lblCurrentStatus";
             this.lblCurrentStatus.Size = new System.Drawing.Size(88, 13);
             this.lblCurrentStatus.TabIndex = 11;
-            this.lblCurrentStatus.Text = "Currently in-game";
+            this.lblCurrentStatus.Text = "Actuellement en jeu";
             // 
             // lblCurrentRemaining
             // 
@@ -165,7 +165,7 @@
             this.lblCurrentRemaining.Name = "lblCurrentRemaining";
             this.lblCurrentRemaining.Size = new System.Drawing.Size(138, 19);
             this.lblCurrentRemaining.TabIndex = 12;
-            this.lblCurrentRemaining.Text = "3 card drops remaining";
+            this.lblCurrentRemaining.Text = "3 cartes restantes";
             this.lblCurrentRemaining.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblGameName
@@ -177,7 +177,7 @@
             this.lblGameName.Size = new System.Drawing.Size(159, 16);
             this.lblGameName.TabIndex = 16;
             this.lblGameName.TabStop = true;
-            this.lblGameName.Text = "Game Name";
+            this.lblGameName.Text = "Nom du jeu";
             this.lblGameName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblGameName_LinkClicked);
             // 
             // mnuTop
@@ -230,7 +230,7 @@
             this.exitToolStripMenuItem.Image = global::IdleMaster.Properties.Resources.imgExit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Text = "Quitter";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // gameToolStripMenuItem
@@ -248,7 +248,7 @@
             this.pauseIdlingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pauseIdlingToolStripMenuItem.Image")));
             this.pauseIdlingToolStripMenuItem.Name = "pauseIdlingToolStripMenuItem";
             this.pauseIdlingToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.pauseIdlingToolStripMenuItem.Text = "&Pause Idling";
+            this.pauseIdlingToolStripMenuItem.Text = "&Pauser le Farming";
             this.pauseIdlingToolStripMenuItem.Click += new System.EventHandler(this.pauseIdlingToolStripMenuItem_Click);
             // 
             // resumeIdlingToolStripMenuItem
@@ -257,7 +257,7 @@
             this.resumeIdlingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("resumeIdlingToolStripMenuItem.Image")));
             this.resumeIdlingToolStripMenuItem.Name = "resumeIdlingToolStripMenuItem";
             this.resumeIdlingToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.resumeIdlingToolStripMenuItem.Text = "Resume Idling";
+            this.resumeIdlingToolStripMenuItem.Text = "Reprendre le Farming";
             this.resumeIdlingToolStripMenuItem.Click += new System.EventHandler(this.resumeIdlingToolStripMenuItem_Click);
             // 
             // skipGameToolStripMenuItem
@@ -265,7 +265,7 @@
             this.skipGameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("skipGameToolStripMenuItem.Image")));
             this.skipGameToolStripMenuItem.Name = "skipGameToolStripMenuItem";
             this.skipGameToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.skipGameToolStripMenuItem.Text = "&Skip Game";
+            this.skipGameToolStripMenuItem.Text = "&Passer le jeu";
             this.skipGameToolStripMenuItem.Click += new System.EventHandler(this.skipGameToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
@@ -281,7 +281,7 @@
             this.aboutToolStripMenuItem.Image = global::IdleMaster.Properties.Resources.imgInfo;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Text = "&A propos";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // tmrReadyToGo
@@ -317,7 +317,7 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(65, 16);
-            this.toolStripStatusLabel1.Text = "Next check";
+            this.toolStripStatusLabel1.Text = "Prochaine vérification";
             // 
             // lblTimer
             // 

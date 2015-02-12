@@ -58,7 +58,7 @@
             this.chkMinToTray.Name = "chkMinToTray";
             this.chkMinToTray.Size = new System.Drawing.Size(188, 17);
             this.chkMinToTray.TabIndex = 0;
-            this.chkMinToTray.Text = "Minimize Idle Master to system tray";
+            this.chkMinToTray.Text = "Minimiser Idle Master à la barre de tâche";
             this.chkMinToTray.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -71,7 +71,7 @@
             this.groupBox2.Size = new System.Drawing.Size(322, 84);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Idling Order";
+            this.groupBox2.Text = "Ordre de Farming";
             // 
             // radIdleLeastDrops
             // 
@@ -80,7 +80,7 @@
             this.radIdleLeastDrops.Name = "radIdleLeastDrops";
             this.radIdleLeastDrops.Size = new System.Drawing.Size(295, 17);
             this.radIdleLeastDrops.TabIndex = 2;
-            this.radIdleLeastDrops.Text = "Prioritize games with the lowest number of available drops";
+            this.radIdleLeastDrops.Text = "Rendre prioritaires les jeux au nombre de cartes à récuperer le plus faible";
             this.radIdleLeastDrops.UseVisualStyleBackColor = true;
             // 
             // radIdleMostDrops
@@ -90,7 +90,7 @@
             this.radIdleMostDrops.Name = "radIdleMostDrops";
             this.radIdleMostDrops.Size = new System.Drawing.Size(299, 17);
             this.radIdleMostDrops.TabIndex = 1;
-            this.radIdleMostDrops.Text = "Prioritize games with the highest number of available drops";
+            this.radIdleMostDrops.Text = "Rendre prioritaire les jeux au nombre de carte à recupérer le plus élevé";
             this.radIdleMostDrops.UseVisualStyleBackColor = true;
             // 
             // radIdleDefault
@@ -102,7 +102,7 @@
             this.radIdleDefault.Size = new System.Drawing.Size(155, 17);
             this.radIdleDefault.TabIndex = 0;
             this.radIdleDefault.TabStop = true;
-            this.radIdleDefault.Text = "Default (Alphabetical Order)";
+            this.radIdleDefault.Text = "Défaut (Odre Alphabétique)";
             this.radIdleDefault.UseVisualStyleBackColor = true;
             // 
             // btnCancel
@@ -144,7 +144,7 @@
             this.MaximizeBox = false;
             this.Name = "frmSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Idle Master Settings";
+            this.Text = "Options d'Idle Master";
             this.Load += new System.EventHandler(this.frmSettings_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
